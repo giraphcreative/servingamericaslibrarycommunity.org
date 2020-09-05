@@ -1,5 +1,5 @@
 {
-    "name" : "alive-cu",
+    "name" : "lcfcu",
     "version" : "1.0.0",
     "devDependencies" : {
         "grunt":                        "latest",
