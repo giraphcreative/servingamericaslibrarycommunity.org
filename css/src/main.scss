@@ -1,0 +1,420 @@
+
+
+// color variables
+$teal: #00A0DF;
+$red: #BE2126;
+
+$lime: #B8D66C;
+$green: #4B8149;
+$forest: #345252;
+
+$grey: #434A54;
+$grey-light: lighten( $grey, 40% );
+
+@import "reset";
+
+@import "fonts";
+
+@import "mixins";
+
+@import "base";
+
+@import "grid";
+
+
+body {
+	background: lighten( $grey-light, 25% );
+}
+
+
+// colors
+.bg-teal { background: $teal; }
+.bg-lime { background: $lime; }
+.bg-green { background: $green; }
+.bg-forest { background: $forest; }
+.bg-red { background: $red; }
+.bg-grey { background: $grey; }
+.bg-grey-light { background: rgba( $grey-light, .2 ); }
+
+.text-teal { color: $teal; }
+.text-lime { color: $lime; }
+.text-green { color: $green; }
+.text-forest { color: $forest; }
+.text-red { color: $red; }
+.text-grey { color: $grey; }
+.text-grey-light { color: $grey-light; }
+
+
+// background-container
+.container {
+	box-shadow: 0 0 30px $grey-light;
+	background: white;
+}
+
+
+// wrap div
+.wrap {
+	max-width: 1100px;
+	margin: 0 auto;
+	position: relative;
+	@include clearfix;
+}
+
+
+// header styles
+header {
+	position: relative;
+	text-align: center;
+	background: url(../img/bg-header.jpg) center center no-repeat;
+	background-size: cover;
+	padding: 20px;
+
+	@include respond-to( 768px ) {
+		padding: 30px;
+	}
+
+	img {
+		margin: 0 auto;
+		max-width: 100%;
+
+		@include respond-to( 450px ) {
+			max-width: 400px;
+		}
+	}
+}
+
+
+.bg-books {
+	background: url(../img/bg-books.jpg) center center no-repeat;
+	background-size: cover;
+
+	td {
+		vertical-align: middle;
+		padding: 10px;
+
+		&.icon-cell {
+			width: 100px;
+		}
+
+		.subtitle {
+			@include font-title;
+			text-transform: uppercase;
+			font-size: 1.2em;
+			color: $forest;
+		}
+	}
+}
+
+
+.bg-text {
+	background: url(../img/bg-text.png) center center repeat-y;
+}
+
+
+.title {
+	background: url(../img/bg-title.png) center center repeat-y;
+	background-size: cover;
+	padding: 5px 20px;
+
+	@include respond-to( 768px ) {
+		padding: 5px 30px;
+	}
+
+	h2 {
+		color: white;
+		font-size: 2em;
+	}
+}
+
+
+.button {
+	background: $forest;
+	color: white;
+	text-transform: uppercase;
+	padding: 10px 30px;
+	margin: 20px 0;
+	@include font-title;
+	font-size: 1.4em;
+}
+
+
+.book-icons {
+	.third {
+		text-align: center;
+
+		img {
+			max-width: 140px;
+		}
+
+		p {
+			text-transform: uppercase;
+			@include font-title;
+			font-size: 1.2em;
+		}
+	}
+}
+
+
+.buttons {
+	margin: 20px 0;
+}
+
+
+.text-boxes {
+	.half {
+		box-shadow: 0 0 15px rgba( black, .2 );
+		text-align: center;
+		padding: 0;
+		background: white;
+
+		h3 {
+			padding: 20px 20px 0;
+			font-size: 1.6em;
+			line-height: 1.3em;
+		}
+
+		p {
+			padding: 20px;
+		}
+
+		.button {
+			display: block;
+			width: 70%;
+			margin: 0 auto 30px;
+
+			@include respond-to( 768px ) {
+				margin: 0 auto 40px;
+			}
+		}
+
+		@include respond-to( 768px ) {
+			width: 45%;
+			margin: 2.5%;
+			min-height: 360px;
+
+			&:nth-child(3) {
+				clear: left;
+			}
+		}
+
+		@include respond-to( 1024px ) {
+			min-height: 415px;
+		}
+	}
+}
+
+
+// tool styles
+.content {
+	padding: 20px;
+
+	@include respond-to( 768px ) {
+		padding: 30px;
+	}
+
+	h2 {
+		font-size: 1.8em;
+		line-height: 1.4em;
+	}
+
+	h3 {
+		font-size: 1.3em;
+		line-height: 1.4em;
+		padding: 20px 0 10px 0;
+	}
+
+	.ipad {
+		@include respond-to( 768px ) {
+			padding: 10px 0 10px 10px;
+			float: right;
+		}
+	}
+
+	.bullet-image {
+		float: left;
+		width: 10%;
+		clear: left;
+		text-align: right;
+		padding: 8px 0;
+
+		@include respond-to( 768px ) {
+			width: 5%;
+		}
+	}
+
+	.bullet-text {
+		float: left;
+		width: 90%;
+		padding: 10px;
+
+		@include respond-to( 768px ) {
+			width: 95%;
+		}
+	}
+
+	.three-quarter {
+		padding: 0 30px 0 0;
+	}
+
+	.more-info {
+		padding: 30px 0 0;
+
+		@include respond-to( 768px ) {
+			padding: 50px 0 0;
+		}
+
+		h2 {
+			color: $green;
+		}
+	}
+
+	ul {
+		list-style-type: disc;
+		padding: 5px 0 5px 25px;
+
+		li {
+			padding: 5px 0;
+		}
+	}
+}
+
+
+
+// button styles
+input[type=submit], button, .btn {
+	@include font-title;
+	padding: 10px;
+	background-color: $forest;
+	color: white;
+	border: 0;
+	font-size: 1.3em;
+	line-height: 1em;
+	width: 100%;
+	box-sizing: border-box;
+	text-transform: uppercase;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	box-shadow: 3px 3px 25px lighten( $grey, 35% );
+
+	@include respond-to( 768px ) {
+		max-width: 30%;
+	}
+
+	span {
+		display: block;
+	}
+	
+	&:after {
+		content: "";
+		position: absolute;
+		right: 5px;
+		top: 50%;
+		width: 30px;
+		height: 30px;
+		margin-top: -15px;
+	}
+
+	&:hover {
+		opacity: .9;
+		color: white;
+	}
+
+	&.go-back {
+		background-color: lighten( $grey, 20% );
+		font-size: 1.5em;
+		color: white;
+	}
+
+	&.calculate, &.apply {
+		background-color: $teal;
+	}
+}
+
+
+.events {
+	padding-top: 0;
+
+	.entry {
+		padding: 20px 0;
+		border-top: 1px solid $grey-light;
+
+		@include respond-to( 768px ) {
+			padding: 30px 0;
+		}
+
+		&:first-child {
+			border-top: 0;
+		}
+	}
+
+	.date {
+		float: right;
+		color: $grey-light;
+		margin: 10px 0 10px 20px;
+		font-size: 1.2em;
+		@include font-title;
+	}
+
+	h3 {
+		text-transform: uppercase;
+		color: $green;
+	}
+
+	.button {
+		@include respond-to( 768px ) {
+			float: right;
+			margin: 0;
+		}
+	}
+}
+
+
+.bg-contact {
+	background: url(../img/bg-text.png) center center no-repeat;
+	background-size: cover;
+
+	form {
+		background: white;
+		padding: 20px;
+		box-shadow: 10px 10px 30px rgba( black, .4 );
+		margin: 20px 0;
+
+		input, select {
+			border: 1px solid #ccc;
+			@include font;
+		}
+	}
+}
+
+
+.footer-bar-top {
+	background: $forest;
+	color: white;
+	padding: 20px;
+	@include font-title;
+	font-size: 1.4em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+.footer-bar {
+	padding: 20px;
+	background: url(../img/bg-title.png) center center repeat-y;
+
+	.logo {
+		@include respond-to( 768px ) {
+			margin-left: 120px;
+		}
+	}
+
+	.footer-right {
+		@include respond-to( 768px ) {
+			float: right;
+			margin-top: 100px;
+		}
+	}
+}
+
