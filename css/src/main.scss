@@ -360,12 +360,17 @@ input[type=submit], button, .btn {
 	h3 {
 		text-transform: uppercase;
 		color: $green;
+
+		em {
+			@include font-title;
+
+		}
 	}
 
 	.button {
 		@include respond-to( 768px ) {
 			float: right;
-			margin: 0;
+			margin: 0 0 10px 10px;
 		}
 	}
 }
