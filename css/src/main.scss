@@ -280,6 +280,14 @@ header {
 
 
 
+.social {
+	@include respond-to( 768px ) {
+		margin-top: -40px;
+	}
+}
+
+
+
 // button styles
 input[type=submit], button, .btn {
 	@include font-title;
