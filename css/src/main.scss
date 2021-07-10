@@ -284,6 +284,10 @@ header {
 	@include respond-to( 768px ) {
 		margin-top: -40px;
 	}
+
+	img {
+		width: 20%;
+	}
 }
 
 
