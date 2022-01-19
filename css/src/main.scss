@@ -67,10 +67,14 @@ header {
 	text-align: center;
 	background: url(../img/bg-header.jpg) center center no-repeat;
 	background-size: cover;
-	padding: 20px;
+	padding: 40px 50px 30px;
 
-	@include respond-to( 768px ) {
-		padding: 30px;
+	@include respond-to( 500px ) {
+		padding: 60px 30px 50px;
+	}
+
+	@include respond-to( 600px ) {
+		padding: 70px 50px 60px;
 	}
 
 	@include respond-to( 1024px ) {
