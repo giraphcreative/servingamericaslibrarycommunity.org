@@ -6,7 +6,7 @@ $red: #BE2126;
 
 $lime: #B8D66C;
 $green: #4B8149;
-$forest: #345252;
+$forest: #1d5832;
 
 $grey: #434A54;
 $grey-light: lighten( $grey, 40% );
@@ -73,6 +73,14 @@ header {
 		padding: 30px;
 	}
 
+	@include respond-to( 1024px ) {
+		padding: 90px;
+	}
+
+	@include respond-to( 1150px ) {
+		padding: 130px;
+	}
+
 	img {
 		margin: 0 auto;
 		max-width: 100%;
@@ -85,8 +93,9 @@ header {
 
 
 .bg-books {
-	background: url(../img/bg-books.jpg) center center no-repeat;
-	background-size: cover;
+	background: white;
+	// background: url(../img/bg-books.jpg) center center no-repeat;
+	// background-size: cover;
 
 	td {
 		vertical-align: middle;
@@ -128,7 +137,8 @@ header {
 
 
 .button {
-	background: $forest;
+	background: url(../img/bg-button.png) center center no-repeat;
+	background-size: cover;
 	color: white;
 	text-transform: uppercase;
 	padding: 10px 30px;
