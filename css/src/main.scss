@@ -67,7 +67,7 @@ header {
 	text-align: center;
 	background: url(../img/bg-header-small.jpg) center center no-repeat;
 	background-size: cover;
-	padding: 40px 50px 30px;
+	padding: 20px;
 
 	@include respond-to( 1024px ) {
 		background: url(../img/bg-header.jpg) center center no-repeat;
