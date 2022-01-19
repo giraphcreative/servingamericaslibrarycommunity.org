@@ -65,19 +65,13 @@ body {
 header {
 	position: relative;
 	text-align: center;
-	background: url(../img/bg-header.jpg) center center no-repeat;
+	background: url(../img/bg-header-small.jpg) center center no-repeat;
 	background-size: cover;
 	padding: 40px 50px 30px;
 
-	@include respond-to( 500px ) {
-		padding: 60px 30px 50px;
-	}
-
-	@include respond-to( 600px ) {
-		padding: 70px 50px 60px;
-	}
-
 	@include respond-to( 1024px ) {
+		background: url(../img/bg-header.jpg) center center no-repeat;
+		background-size: cover;
 		padding: 90px;
 	}
 
