@@ -146,6 +146,17 @@ header {
 }
 
 
+.button-white {
+	background: #fff;
+	color: $forest;
+	text-transform: uppercase;
+	padding: 10px 30px;
+	margin: 20px 0;
+	@include font-title;
+	font-size: 1.4em;
+}
+
+
 .book-icons {
 	.third {
 		text-align: center;
@@ -231,6 +242,20 @@ header {
 		padding: 20px 0 10px 0;
 	}
 
+	&.member {
+		background: url(../img/bg-title.png) center repeat-y;
+		margin-bottom: 30px;
+		color: white;
+
+		@include respond-to( 768px ) {
+			padding: 15px 30px;
+		}
+
+		h2 {
+			color: white;
+		}
+	}
+
 	.ipad {
 		@include respond-to( 768px ) {
 			padding: 10px 0 10px 10px;
@@ -282,6 +307,41 @@ header {
 
 		li {
 			padding: 5px 0;
+		}
+	}
+}
+
+
+.columns {
+	@include respond-to( 768px ) {
+		display: flex;
+		margin-left: -20px;
+	}
+
+	.col {
+		color: white;
+		border: 3px solid white;
+		text-align: center;
+		margin-bottom: 20px;
+
+		@include respond-to( 768px ) {
+			flex: 1;
+			margin-left: 20px;
+			margin-bottom: 0;
+		}
+
+		.col-header {
+			background: white;
+			padding: 14px;
+			color: $forest;
+			text-transform: uppercase;
+			@include font-title;
+			font-size: 1.4em;
+		}
+
+		.col-content {
+			padding: 10px 20px;
+			font-size: .85em;
 		}
 	}
 }
