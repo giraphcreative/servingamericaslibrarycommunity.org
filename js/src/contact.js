@@ -17,11 +17,13 @@ var contact_submit = function( form ) {
 	// store some variables with form values for validation
 	// and eventual submission.
 
+	// console.log( $( form ).find( "select[name=account]" ).find(':selected').val() );
+
 	var field = {
 			name: $( form ).find( "input[name=name]" ).val(),
 			email: $( form ).find( "input[name=email]" ).val(),
 			phone: $( form ).find( "input[name=phone]" ).val(),
-			account: $( form ).find( "select[name=account]" ).find(':selected').text()
+			account: $( form ).find( "select[name=account]" ).find(':selected').val()
 		},
 		url_params = $.param( field ),
 		errors = [],
