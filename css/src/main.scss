@@ -294,7 +294,7 @@ header {
 		}
 
 		h2 {
-			color: $green;
+			color: $forest;
 		}
 	}
 
@@ -305,6 +305,19 @@ header {
 		li {
 			padding: 5px 0;
 		}
+	}
+}
+
+
+.cds {
+	background: url(../img/bg-title.png) center center repeat-y;
+	margin-bottom: 30px;
+	text-align: center;
+	padding-top: 20px;
+
+	.quiet {
+		padding: 0 30px 30px;
+		color: rgba( white, .6 );
 	}
 }
 
@@ -351,6 +364,17 @@ header {
 	}
 }
 
+
+.quiet {
+	font-size: .85em;
+	line-height: 1.4em;
+	color: rgba( $grey, .7 );
+
+	@include respond-to( 768px ) {
+		font-size: .7em;
+		line-height: 1.45em;
+	}
+}
 
 
 .social {
@@ -444,7 +468,7 @@ input[type=submit], button, .btn {
 
 	h3 {
 		text-transform: uppercase;
-		color: $green;
+		color: $forest;
 
 		em {
 			@include font-title;
