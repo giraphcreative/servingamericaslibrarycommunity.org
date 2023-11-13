@@ -360,8 +360,12 @@ header {
 			font-size: .85em;
 
 			@include respond-to( 768px ) {
-				p.pad {
-					padding: 40px 0;
+				p.pad-1 {
+					padding: 52px 0;
+				}
+
+				p.pad-2 {
+					padding: 38px 0;
 				}
 			}
 		}
