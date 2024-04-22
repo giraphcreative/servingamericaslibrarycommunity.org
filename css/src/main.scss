@@ -242,6 +242,7 @@ header {
 	&.member {
 		background: url(../img/bg-title.png) center repeat-y;
 		color: white;
+		margin-bottom: 10px;
 
 		@include respond-to( 768px ) {
 			padding: 15px 30px;
